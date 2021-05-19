@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Break</title>
+</head>
+<body>
+    <center><h1>Word Break Program</h1></center><br>
+    <center><form action="{{ url_for('dictwords')}}" method="post">
+        <p>Click the button below to get the dictionary words</p>
+        <input type="text" name="dict_words" value="mobile,samsung,sam,sung,man,mango,icecream,and,go,i,love,ice,cream">
+        <button type="submit">Get dictionary words</button>
+    </form></center><br>
+    <center><h3>Dictionary words: {{got_dict}}</h3><br>
+    <h3>Type the word below</h3></center>
+
+<center><form action="{{ url_for('wordBreak')}}" method="post">
+    <input type="text" name="inputword" placeholder="enter the word"/>
+    <button type="submit">Submit</button>
+</form></center><br>
+
+<center><h2>{{result}}</h2></center>
+
+</body>
+</html>
